@@ -1,6 +1,6 @@
 {
-  "name": "embedly",
-  "version": "2.1.0",
+  "name": "@secoya/embedly",
+  "version": "3.0.0",
   "description": "Embedly client library for node",
   "homepage": "https://github.com/embedly/embedly-node",
   "keywords": [],
@@ -19,14 +19,14 @@
   },
   "dependencies": {
     "lodash": "4.17.21",
-    "superagent": "8.0.6",
-    "sprintf": "0.1.4",
+    "superagent": "10.2.0",
+    "sprintf": "0.1.5",
     "hashish": "0.0.4"
   },
   "devDependencies": {
-    "mocha": "^1.8.2",
-    "should": "1.2.2",
-    "winston": "0.8.2"
+    "mocha": "^11.1.0",
+    "should": "13.2.3",
+    "winston": "3.17.0"
   },
   "scripts": {
     "test": "mocha"

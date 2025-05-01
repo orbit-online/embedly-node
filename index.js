@@ -138,7 +138,7 @@ embedly.prototype.apiCall = function(endpoint, version, q, fn) {
   q.urls = self.matchUrls(q.urls);
 
   if (q.urls.length > 0) {
-    self.config.logger.debug('calling: ' + url + '?' + querystring.stringify(q));
+    self.config.logger.log('debug', 'calling: ' + url + '?' + querystring.stringify(q));
     var req = request
       .get(url)
       .timeout(self.config.timeout)
@@ -148,7 +148,7 @@ embedly.prototype.apiCall = function(endpoint, version, q, fn) {
     req.end(function(e, res) {
         if (!!e) return fn(e)
         if (res.status >= 400) {
-          self.config.logger.error(String(res.status), res.text);
+          self.config.logger.log('error', String(res.status), res.text);
           return fn(new Error('Invalid response'), res.text);
         }
         return fn(null, self.serializeResponse(origUrls, res.text))
