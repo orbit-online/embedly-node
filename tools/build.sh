@@ -11,7 +11,7 @@ main() {
   rm -Rf dist/
   mkdir -p dist/
   mocha
-  cp -r index.js LICENSE bin/ dist/
+  cp -r index.js LICENSE README.md bin/ dist/
 }
 
 main "$@"
