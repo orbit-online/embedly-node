@@ -36,12 +36,12 @@ jobs:
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN_RW }}
     - name: Update compilation artifact
-      run: tar -cf ../dist.tar *
+      run: tar -cf ../dist-published.tar *
       working-directory: dist
     - uses: actions/upload-artifact@v4
       with:
-        name: dist.tar
-        path: dist.tar
+        name: dist-published.tar
+        path: dist-published.tar
         retention-days: 1
 
   create-release:
@@ -67,9 +67,9 @@ jobs:
         REF: ${{ github.ref }}
     - uses: actions/download-artifact@v4
       with:
-        name: dist.tar
+        name: dist-published.tar
     - name: Compress release artifact
-      run: gzip dist.tar && mv dist.tar.gz ${{ steps.version.outputs.tag }}.tar.gz
+      run: gzip dist-published.tar && mv dist-published.tar.gz ${{ steps.version.outputs.tag }}.tar.gz
     - name: Create Release
       uses: ncipollo/release-action@v1
       with:
