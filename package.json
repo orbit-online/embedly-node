@@ -2,15 +2,16 @@
   "name": "@secoya/embedly",
   "version": "3.0.0",
   "description": "Embedly client library for node",
-  "homepage": "https://github.com/embedly/embedly-node",
+  "homepage": "https://github.com/secoya/embedly-node",
   "keywords": [],
+  "private": true,
   "author": "Bob Corsaro <bob@embed.ly> (http://www.google.com/profiles/rcorsaro)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/embedly/embedly-node.git"
+    "url": "git://github.com/secoya/embedly-node.git"
   },
   "bugs": {
-    "url": "http://github.com/embedly/embedly-node/issues/"
+    "url": "http://github.com/secoya/embedly-node/issues/"
   },
   "directories": {
     "doc": "./docs",
